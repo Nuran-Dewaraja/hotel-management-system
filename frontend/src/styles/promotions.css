@@ -1,0 +1,287 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(145deg, #d3af37 0%, #f0f0f0 50%, #0a0a0a 100%);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #0a0a0a;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.add-btn-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 24px;
+}
+
+.add-btn {
+  background-color: #d3af37;
+  color: #0a0a0a;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.add-btn:hover {
+  background-color: #b89b2f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.promotion-form {
+  background-color: #0a0a0a;
+  color: #f0f0f0;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  margin-bottom: 32px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.promotion-form h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #d3af37;
+}
+
+.promotion-form input,
+.promotion-form textarea,
+.promotion-form select {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 2px solid #333;
+  box-sizing: border-box;
+  background-color: #f0f0f0;
+  color: #0a0a0a;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.promotion-form input:focus,
+.promotion-form textarea:focus,
+.promotion-form select:focus {
+  outline: none;
+  border-color: #d3af37;
+  box-shadow: 0 0 8px rgba(211, 175, 55, 0.3);
+}
+
+.promotion-form textarea {
+  height: 120px;
+  resize: vertical;
+  font-family: Arial, sans-serif;
+}
+
+.promotion-form input[type="file"] {
+  background-color: #333;
+  color: #f0f0f0;
+  border: 2px dashed #d3af37;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.promotion-form input[type="file"]:hover {
+  background-color: #444;
+  border-color: #b89b2f;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.promotion-form button {
+  background-color: #d3af37;
+  color: #0a0a0a;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  min-width: 120px;
+  transition: all 0.3s ease;
+}
+
+.promotion-form button:hover {
+  background-color: #b89b2f;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.promotion-form .cancel-button {
+  background-color: #666;
+  color: #f0f0f0;
+}
+
+.promotion-form .cancel-button:hover {
+  background-color: #555;
+}
+
+.promotion-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.promotion-card {
+  background-color: #0a0a0a;
+  color: #f0f0f0;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.promotion-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+}
+
+.promotion-card h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.promotion-card p {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.promotion-card button {
+  background-color: #d3af37;
+  color: #0a0a0a;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 10px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.promotion-card button:hover {
+  background-color: #b89b2f;
+  transform: translateY(-1px);
+}
+
+.promotion-card .cancel-button {
+  background-color: #555555;
+  color: #f0f0f0;
+}
+
+.promotion-card .cancel-button:hover {
+  background-color: #444444;
+}
+
+.promotion-card .delete-button {
+  background-color: #dc2626;
+  color: #f0f0f0;
+}
+
+.promotion-card .delete-button:hover {
+  background-color: #b91c1c;
+}
+
+.error {
+  color: #dc2626;
+  text-align: center;
+  margin: 20px 0;
+  padding: 16px;
+  background-color: rgba(220, 38, 38, 0.1);
+  border: 1px solid #dc2626;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.loading {
+  color: #0a0a0a;
+  text-align: center;
+  margin: 40px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.no-promotions {
+  color: #0a0a0a;
+  text-align: center;
+  margin: 40px 0;
+  font-size: 18px;
+  background-color: rgba(240, 240, 240, 0.8);
+  padding: 30px;
+  border-radius: 12px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+  
+  .promotion-form {
+    padding: 30px 20px;
+    margin: 0 10px 32px;
+  }
+  
+  .promotion-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .form-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .promotion-form button {
+    width: 100%;
+  }
+  
+  h1 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .promotion-form {
+    padding: 20px 15px;
+  }
+  
+  .promotion-card {
+    padding: 20px;
+  }
+  
+  .card-buttons {
+    flex-direction: column;
+  }
+}
